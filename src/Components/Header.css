@@ -1,0 +1,116 @@
+.header {
+  background-color: #14261c;
+  margin: 0;
+  min-height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+.logo {
+  left: 0;
+  width: 10%;
+}
+.nav-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+.nav-links,
+.nav-list a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  position: relative;
+  transition: all 0.5s;
+}
+a:hover {
+  /* background-color: #606c5b; */
+  color: white;
+}
+#schedule:hover {
+  background-color: #606c5b;
+}
+a::before {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  height: 12px;
+  width: 12px;
+  border: 3px solid #606c5b;
+  border-width: 0 0 3px 3px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+a::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 12px;
+  height: 12px;
+  width: 12px;
+  border: 3px solid #606c5b;
+  border-width: 3px 3px 0 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+a:hover::before {
+  opacity: 1;
+  bottom: -8px;
+  left: -8px;
+}
+a:hover::after {
+  opacity: 1;
+  bottom: -8px;
+  right: -8px;
+}
+
+/* Initially hide menu icon */
+.menu-icon {
+  display: none;
+}
+
+/* Responsive adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Hide navigation links and show menu icon */
+  .logo {
+    width: 30%;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    background-color: #14261c;
+    flex-direction: column;
+    /* Ensure it has a z-index high enough to be on top of other content, if necessary */
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Display nav links when active */
+    z-index: 1; /* Ensure it's on top of other content */
+  }
+
+  .nav-list {
+    text-align: center; /* Ensure text is centered */
+    width: 100%; /* Full width for each nav item */
+    padding: 10px 0; /* Add padding for tap targets */
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu icon */
+    cursor: pointer; /* Change the cursor for better UX */
+    font-size: 24px; /* Adjust size as necessary */
+    background-color: transparent;
+    border: none;
+  }
+}
