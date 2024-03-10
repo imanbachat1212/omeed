@@ -1,6 +1,9 @@
 .about {
   background-color: #eeeeee;
   margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 5%;
 }
 .subabout {
   display: flex;
@@ -11,20 +14,20 @@
   padding-top: 5%;
 }
 .omeed {
-  vertical-align: middle;
-  display: inline-block;
-  height: auto;
-  width: 30%;
+  /* display: inline-block; */
+  width: 20%;
   margin-top: 5%;
-  margin-left: 10%;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
+  height: 30%;
+  padding-top: -5%;
+  padding-left: 5%;
+  /* box-shadow: -50px 7px 5px #6254e7; */
+  margin: 0 auto;
 }
 .about-section {
   margin-top: 5%;
   max-width: 50%;
   margin-left: 5%;
+  margin: 0 auto;
 }
 /* Media Queries */
 @media (max-width: 768px) {
@@ -52,5 +55,87 @@
   .about-section {
     max-width: 100%; /* Allow elements to fill the available space */
     font-size: small;
+  }
+}
+
+.quadrados {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.quadrados li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  background-color: rgba(148, 32, 32, 0.15);
+  bottom: -100px;
+  -webkit-animation: square 20s infinite;
+  animation: square 20s infinite;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+.quadrados li:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 20%;
+  animation-duration: 10s; /* Adjusted from 20s for faster animation */
+}
+
+.quadrados li:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  left: 40%;
+  animation-delay: 1s; /* Optionally adjust the delay for faster repetition */
+  animation-duration: 8.5s; /* Adjusted from 17s */
+}
+
+.quadrados li:nth-child(3) {
+  width: 10px;
+  height: 10px;
+  left: 60%;
+  animation-delay: 2s; /* Adjusted for balance */
+  animation-duration: 6.5s; /* Adjusted from 13s */
+}
+
+.quadrados li:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  left: 80%;
+  animation-delay: 0.5s; /* Adjusted for quicker start */
+  animation-duration: 11s; /* Adjusted from 22s */
+}
+
+.quadrados li:nth-child(5) {
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  animation-delay: 3.5s; /* Optionally adjusted for variety */
+  animation-duration: 6s; /* Adjusted from 12s */
+}
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1080px) rotate(630deg);
+    transform: translateY(-1080px) rotate(630deg);
+  }
+}
+
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1080px) rotate(630deg);
+    transform: translateY(-1080px) rotate(630deg);
   }
 }

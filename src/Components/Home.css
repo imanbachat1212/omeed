@@ -1,20 +1,22 @@
 .home {
-  background-image: url(../images/profile-omeed.jpg);
+  background-image: url(../images/WhatsApp\ Image\ 2024-03-09\ at\ 6.53.26\ PM.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; /* Center the background image */
+  background-position: right; /* Center the background image */
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   margin: 0;
   top: 0;
   padding-top: 0;
-  display: flex; /* Use flex to center the content */
-  align-items: center; /* Align vertically */
-  justify-content: center; /* Align horizontally */
+}
+.om {
+  color: #14261c;
 }
 .top {
-  padding-top: 15vh;
+  padding-top: 25vh;
   padding-left: 2%;
+  max-width: 60%;
+  margin-left: 5%;
 }
 .title {
   margin-top: 0;
@@ -23,6 +25,7 @@
 .subtitle {
   font-size: 15px;
   font-weight: normal;
+  text-align: justify;
 }
 
 .title,

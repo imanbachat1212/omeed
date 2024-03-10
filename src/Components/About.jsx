@@ -3,10 +3,10 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="about">
+    <div className="about  ">
       <h1 className="title-about">About</h1>
 
-      <div className="subabout">
+      <div className="subabout ">
         <img
           src={require("../images/about.jpg")}
           alt="Omeed"
@@ -35,6 +35,13 @@ const About = () => {
           </p>
         </div>
       </div>
+      <ul class="quadrados">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
   );
 };

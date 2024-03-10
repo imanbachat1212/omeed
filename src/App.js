@@ -5,6 +5,7 @@ import About from "./Components/About";
 import Services from "./Components/Services";
 import Leader from "./Components/Leader";
 import Reviews from "./Components/Reviews";
+import Reputation from "./Components/Reputation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -18,9 +19,10 @@ function App() {
     <div className="App">
       <Header />
       <Home />
+      <Leader />
       <About />
       <Services />
-      <Leader />
+      <Reputation />
       <Reviews />
     </div>
   );

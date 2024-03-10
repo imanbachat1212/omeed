@@ -6,7 +6,7 @@ const Home = () => {
     <div className="home">
       <div className="top">
         <h1 className="title">
-          UNLEASHING MISSION DRIVEN LEADERS TO ACHIEVE IMPOSSIBLE RESULTS
+          WHO IS <span className="om">OMEED?</span>
         </h1>
         <h3 className="subtitle">
           As a leader, team or organization you’re facing unprecedented change
